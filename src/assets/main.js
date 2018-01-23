@@ -44,3 +44,8 @@ function getResults(input){
 
   if (corGues===4){return true;} else {return false;}
 }
+
+function showAnswer(p){
+  document.getElementById('code').innerHTML=answer;
+  if (p) {document.getElementById('code').addClass(' success');} else {document.getElementById('code').addClass(' failure');}
+}
