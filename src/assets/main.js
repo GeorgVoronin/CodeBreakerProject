@@ -47,5 +47,5 @@ function getResults(input){
 
 function showAnswer(p){
   document.getElementById('code').innerHTML=answer;
-  if (p) {document.getElementById('code').addClass(' success');} else {document.getElementById('code').addClass(' failure');}
+  if (p) {document.getElementById('code').setAttribute('class', 'code success');} else {document.getElementById('code').setAttribute('class', 'code failure');}
 }
