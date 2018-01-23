@@ -10,4 +10,7 @@ function guess() {
 
 function setHiddenFields(){
   answer = Math.floor(Math.random()*10000);
+  answer = answer.toString();
+
+  while (answer.length<4) {answer = '0' + answer;}
 }
