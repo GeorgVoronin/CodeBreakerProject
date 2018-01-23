@@ -6,16 +6,16 @@ function guess() {
     //add functionality to guess function here
     if(answer!='' && attempt!=''){
 
-      setHiddenFields(answer);
+      setHiddenFields();
     }
 }
 
 //implement new functions here
 
-function setHiddenFields(a, at){
-  at = 0;
-  a = Math.floor(Math.random()*10000);
-  a = answer.toString();
+function setHiddenFields(){
+  attempt = 0;
+  answer = Math.floor(Math.random()*10000);
+  answer = answer.toString();
 
-  while (a.length<4) {a = '0' + a;}
+  while (answer.length<4) {answer = '0' + answer;}
 }
