@@ -6,7 +6,7 @@ function guess() {
     //add functionality to guess function here
     if(answer==='' && attempt==='') {setHiddenFields();}
 
-    if (validateInput(input.value)) {attempt++;} else {return false;}
+    if (validateInput(input.value)) {attempt++;} else {return;}
 }
 
 //implement new functions here
