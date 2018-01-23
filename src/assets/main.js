@@ -26,7 +26,7 @@ function validateInput(a){
 }
 
 function getResults(a){
-  let html = '<div class="row"><span class="col-md-6">' + input + '</span><div class="col-md-6">';
+  let html = '<div class="row"><span class="col-md-6">' + a + '</span><div class="col-md-6">';
   for (var i = 0; i < a.length; i++){
     if (a.CharAt(i)===answer.value.CharAt(i)) {html += '<span class="glyphicon glyphicon-ok"></span>';}
     else if (answer.value.includes(a.CharAt(i)) && !a.CharAt(i)===answer.value.CharAt(i)) {html += '<span class="glyphicon glyphicon-transfer"></span>';}
