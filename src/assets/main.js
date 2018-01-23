@@ -25,11 +25,11 @@ function validateInput(a){
   if (a.length===4) {return true;} else {setMessage("Guesses must be exactly 4 characters long."); return false;}
 }
 
-function getResults(a){
-  let html = '<div class="row"><span class="col-md-6">' + a + '</span><div class="col-md-6">';
-  for (var i = 0; i < a.value.length; i++){
-    if (a.value.CharAt(i)===answer.value.CharAt(i)) {html += '<span class="glyphicon glyphicon-ok"></span>';}
-    else if (answer.value.includes(a.value.CharAt(i)) && !a.value.CharAt(i)===answer.value.CharAt(i)) {html += '<span class="glyphicon glyphicon-transfer"></span>';}
+function getResults(input){
+  let html = '<div class="row"><span class="col-md-6">' + input + '</span><div class="col-md-6">';
+  for (var i = 0; i < 4; i++){
+    if (input.charAt(i)===answer.value.charAt(i)) {html += '<span class="glyphicon glyphicon-ok"></span>';}
+    else if (answer.value.includes(input.value.charAt(i)) && !input.charAt(i)===answer.value.charAt(i)) {html += '<span class="glyphicon glyphicon-transfer"></span>';}
     else {html += '<span class="glyphicon glyphicon-remove"></span>';}
   }
   html += '</div></div>';
