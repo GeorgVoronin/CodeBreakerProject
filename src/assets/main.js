@@ -46,6 +46,6 @@ function getResults(input){
 }
 
 function showAnswer(p){
-  document.getElementById('code').innerHTML=answer;
-  if (p) {document.getElementById('code').setAttribute('class', 'code success');} else {document.getElementById('code').setAttribute('class', 'code failure');}
+  document.getElementById('code').innerHTML=answer.value;
+  if (p) {document.getElementById('code').className = "success";} else {document.getElementById('code').className = "failure";}
 }
