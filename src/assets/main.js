@@ -16,6 +16,10 @@ function setHiddenFields(){
   attempt.value = 0;
   answer.value = Math.floor(Math.random()*10000);
   answer.toString();
-
   while (answer.length<4) {answer = '0' + answer;}
+}
+
+function setMessage(a){
+  let message = document.getElementById('message');
+  message.innerHTML=a;
 }
