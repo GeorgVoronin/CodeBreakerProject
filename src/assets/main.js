@@ -30,12 +30,15 @@ function validateInput(a){
 }
 
 function getResults(input){
+  var corGues = 0;
   let html = '<div class="row"><span class="col-md-6">' + input + '</span><div class="col-md-6">';
   for (var i = 0; i <input.length; i++){
-    if (input.charAt(i)===answer.value.charAt(i)) {html += '<span class="glyphicon glyphicon-ok"></span>';}
+    if (input.charAt(i)===answer.value.charAt(i)) {corGues++; html += '<span class="glyphicon glyphicon-ok"></span>';}
     else if (answer.value.indexOf(input.charAt(i))>-1) {html += '<span class="glyphicon glyphicon-transfer"></span>';}
     else {html += '<span class="glyphicon glyphicon-remove"></span>';}
   }
   html += '</div></div>';
   document.getElementById('results').innerHTML+=html;
+
+  if (corGues===4){return true;} else {return false;}
 }
