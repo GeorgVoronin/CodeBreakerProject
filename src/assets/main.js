@@ -8,7 +8,7 @@ function guess() {
 
     if (validateInput(input.value)) {attempt.value++;} else {return;}
 
-    if (getResults(input);) {setMessage("You Win! :)")}
+    if (getResults(input)) {setMessage("You Win! :)")}
 }
 
 
