@@ -4,9 +4,14 @@ let attempt = document.getElementById('attempt');
 function guess() {
     let input = document.getElementById('user-guess');
     //add functionality to guess function here
-    if(answer==='' && attempt===''){
-
+    if(answer==='' && attempt==='')
       setHiddenFields();
+    }
+
+    if (validateInput(input.value)) {
+      attempt++;
+    } else {
+      return;
     }
 }
 
