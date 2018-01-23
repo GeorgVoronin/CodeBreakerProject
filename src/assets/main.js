@@ -23,3 +23,7 @@ function setMessage(a){
   let message = document.getElementById('message');
   message.innerHTML=a;
 }
+
+function validateInput(a){
+  if (a.length===4) {return true;} else {setMessage("Guesses must be exactly 4 characters long."); return false;}
+}
