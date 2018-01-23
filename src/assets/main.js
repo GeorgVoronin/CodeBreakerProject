@@ -9,7 +9,11 @@ function guess() {
     if (validateInput(input.value)) {attempt.value++;} else {return;}
 }
 
+
+
+//
 //implement new functions here
+//
 
 function setHiddenFields(){
   attempt.value = '0';
@@ -27,14 +31,11 @@ function validateInput(a){
 
 function getResults(input){
   let html = '<div class="row"><span class="col-md-6">' + input + '</span><div class="col-md-6">';
-  for (var i = 0; i < 4; i++){
+  for (var i = 0; i <input.length; i++){
     if (input.charAt(i)===answer.value.charAt(i)) {html += '<span class="glyphicon glyphicon-ok"></span>';}
     else if (answer.value.includes(input.value.charAt(i)) && !input.charAt(i)===answer.value.charAt(i)) {html += '<span class="glyphicon glyphicon-transfer"></span>';}
     else {html += '<span class="glyphicon glyphicon-remove"></span>';}
   }
   html += '</div></div>';
-
   document.getElementById('results').innerHTML+=html;
-
-
 }
