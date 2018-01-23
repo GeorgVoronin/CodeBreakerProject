@@ -51,6 +51,6 @@ function showAnswer(p){
 }
 
 function showReplay(){
-  document.getElementById('guessing-div').setAttribute('style.display' , 'none');
-  document.getElementById('replay-div').setAttribute('style.display' , 'none');
+  document.getElementById('guessing-div').setAttribute('style' , 'display:none');
+  document.getElementById('replay-div').setAttribute('style' , 'display:block');
 }
