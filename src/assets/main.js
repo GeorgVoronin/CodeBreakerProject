@@ -49,3 +49,8 @@ function showAnswer(p){
   document.getElementById('code').innerHTML=answer.value;
   if (p) {document.getElementById('code').className = " success";} else {document.getElementById('code').className = " failure";}
 }
+
+function showReplay(){
+  document.getElementById('guessing-div').setAttribute('style.display' , 'none');
+  document.getElementById('replay-div').setAttribute('style.display' , 'none');
+}
