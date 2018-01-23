@@ -7,6 +7,8 @@ function guess() {
     if(answer==='' || attempt==='') {setHiddenFields();}
 
     if (validateInput(input.value)) {attempt.value++;} else {return;}
+
+    if (getResults(input);) {setMessage("You Win! :)")}
 }
 
 
